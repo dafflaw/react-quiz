@@ -83,7 +83,7 @@ function QuizProvider({ children }) {
   )
 
   useEffect(function () {
-    fetch("https://quiz-app-json-server.vercel.app/")
+    fetch("https://quiz-app-json-server.vercel.app/questions")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch((err) => dispatch({ type: "dataFailed" }))
